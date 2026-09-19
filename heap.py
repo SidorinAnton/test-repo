@@ -4,8 +4,14 @@ T = TypeVar("T")
 
 
 class MinHeap:
-    def __init__(self):
+    def __init__(self, args: Optional[List[T]] = None):
         self.heap: List[T] = []
+
+        if args is None:
+            return
+
+        for val in args:
+            self.add(val)
 
     def add(self, value: T):
         self.heap.append(value)
