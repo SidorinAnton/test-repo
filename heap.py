@@ -25,7 +25,9 @@ class MinHeap:
         self._sift_down(0)
         return val
 
-    def peak(self) -> T:
+    def peak(self) -> Optional[T]:
+        if len(self.heap) == 0:
+            return
         return self.heap[0]
 
     def _swap(self, idx1: int, idx2: int):
