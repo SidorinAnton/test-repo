@@ -4,7 +4,7 @@ T = TypeVar("T")
 
 
 class MinHeap:
-    def __init__(self, arr=None):
+    def __init__(self, arr: Optional[List[T]] = None):
         if arr is None:
             self.heap = []
         else:
