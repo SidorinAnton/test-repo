@@ -7,27 +7,14 @@ class MinHeap:
     def __init__(self):
         self.heap: List[T] = []
 
-    #####
-    # def __init__(self, args: Optional[List[T]] = None):
-    #     self.heap: List[T] = []
+    def __init__(self, args: Optional[List[T]] = None):
+        self.heap: List[T] = []
 
-    #     if args is None:
-    #         return
+        if args is None:
+            return
 
-    #     for val in args:
-    #         self.add(val)
-
-    #####
-    # def __init__(self, arr=None):
-    #     if arr is None:
-    #         self.heap = []
-    #     else:
-    #         self.heap = arr
-    #         self.heapify()
-
-    # def heapify(self):
-    #     for i in range(len(self.heap) - 1, -1, -1):
-    #         self.sift_down(i)
+        for val in args:
+            self.add(val)
 
     def add(self, value: T):
         self.heap.append(value)
